@@ -2,6 +2,8 @@
 
 This is a [Vim](http://www.vim.org/) plugin that provides highlighting inside CSS [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). It kind of works.
 
+![screenshot](https://raw.githubusercontent.com/alxndrsn/vim-javascript-css/master/screenshot.png)
+
 This module is experimental and strongly inspired by [vim-javascript-sql](https://github.com/statico/vim-javascript-sql).
 
 ## Installation
