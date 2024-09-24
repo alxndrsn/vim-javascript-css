@@ -1,22 +1,22 @@
 " Vim plugin
 " Language: JavaScript
-" Maintainer: Ian Langworth <ian@langworth.com>
+" Maintainer: alxndrsn
 
 if exists('b:current_syntax')
   let s:current_syntax = b:current_syntax
   unlet b:current_syntax
 endif
 
-exec 'syntax include @SQLSyntax syntax/' . g:javascript_sql_dialect . '.vim'
+exec 'syntax include @CSSSyntax syntax/css.vim'
 if exists('s:current_syntax')
   let b:current_syntax = s:current_syntax
 endif
 
-syntax region sqlTemplateString start=+`+ skip=+\\\(`\|$\)+ end=+`+ contains=@SQLSyntax,jsTemplateExpression,jsSpecial extend
-exec 'syntax match sqlTaggedTemplate +\%(SQL\)\%(`\)\@=+ nextgroup=sqlTemplateString'
+syntax region cssTemplateString start=+`+ skip=+\\\(`\|$\)+ end=+`+ contains=@CSSSyntax,jsTemplateExpression,jsSpecial extend
+exec 'syntax match cssTaggedTemplate +\%(CSS\)\%(`\)\@=+ nextgroup=cssTemplateString'
 
-hi def link sqlTemplateString jsTemplateString
-hi def link sqlTaggedTemplate jsTaggedTemplate
+hi def link cssTemplateString jsTemplateString
+hi def link cssTaggedTemplate jsTaggedTemplate
 
-syn cluster jsExpression add=sqlTaggedTemplate
-syn cluster sqlTaggedTemplate add=sqlTemplateString
+syn cluster jsExpression add=cssTaggedTemplate
+syn cluster cssTaggedTemplate add=cssTemplateString
