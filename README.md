@@ -1,32 +1,28 @@
-# Template Literal SQL Highlighting for Vim
+# Template Literal CSS Highlighting for Vim
 
-This is a [Vim](http://www.vim.org/) plugin that provides highlighting inside SQL [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) when using a module like [sql-template-strings](https://github.com/felixfbecker/node-sql-template-strings). It kind of works.
+This is a [Vim](http://www.vim.org/) plugin that provides highlighting inside CSS [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). It kind of works.
 
-![screenshot](https://raw.githubusercontent.com/statico/vim-javascript-sql/master/screenshot.png)
-
-This module is experimental and strongly inspired by [vim-graphql](https://github.com/jparise/vim-graphql).
+This module is experimental and strongly inspired by [vim-javascript-sql](https://github.com/statico/vim-javascript-sql).
 
 ## Installation
 
 ### Using [Plug](https://github.com/junegunn/vim-plug)
 
-1. Add `Plug 'statico/vim-javascript-sql'` to `~/.vimrc`
+1. Add `Plug 'alxndrsn/vim-javascript-css'` to `~/.vimrc`
 1. `vim +PluginInstall +qall`
 
 ### Using [Vundle](https://github.com/VundleVim/Vundle.vim)
 
-1. Add `Plugin 'statico/vim-javascript-sql'` to `~/.vimrc`
+1. Add `Plugin 'alxndrsn/vim-javascript-css'` to `~/.vimrc`
 1. `vim +PluginInstall +qall`
 
 ### Using [Pathogen](https://github.com/tpope/vim-pathogen)
 
 1. `cd ~/.vim/bundle`
-1. `git clone https://github.com/statico/vim-javascript-sql.git`
+1. `git clone https://github.com/alxndrsn/vim-javascript-css.git`
 
-## Configuration
+### Using Vim 8 built-in package manager
 
-This plugin uses the generic SQL syntax by default. If you want to use a different dialect, like PostgreSQL, put something like this in your .vimrc:
-
-```vim
-let g:javascript_sql_dialect = 'pgsql'
+```
+git clone --depth 1 https://github.com/alxndrsn/vim-javascript-css ~/.vim/pack/plugins/start/vim-javascript-css
 ```
